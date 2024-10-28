@@ -244,7 +244,7 @@ body{
 /*INICIO CÓDIGO SEÇÃO OFERTAS*/
 .item{
     display: none;
-    width: 102%;
+    width: 101.08%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -265,6 +265,7 @@ body{
     left:50% ;
     top:50%;
     transform: translate(-50%,-50%);
+    z-index: 1;
 }
 
 
@@ -277,7 +278,56 @@ body{
     transform: translate(-50%,-50%);
    
 }
+/*CARD-COLORIDO-CARROSSEL*/
+.oferta-card{
+    width: 800PX;
+    height: 700px;
+    background-color: black;
+    position: absolute;
+    background-color: var(--background);
+    z-index: 0;
+}
 
+@media screen and (max-width:1500px) {
+    .oferta-card{
+        width: 750PX;
+       
+    }
+}
+@media screen and (max-width:1470px) {
+    .oferta-card{
+        width: 730PX;
+    }
+}
+
+@media screen and (max-width:1430px) {
+    .oferta-card{
+        width: 710PX;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .oferta-card{
+        width: 690PX;
+    }
+}
+@media screen and (max-width:1370px) {
+    .oferta-card{
+        width: 670PX;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    .oferta-card{
+        width: 630PX;
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .oferta-card{
+        width: 100%;
+    }
+}
 #prev,#next{
     position: absolute;
     top: 1050px;
@@ -316,6 +366,7 @@ body{
         opacity: 0;
     }
 }
+
 .item.active .combo{
     animation: toActive 0.5s ease-in-out 1;
 }
@@ -508,9 +559,14 @@ body{
     padding: 20px;
     /*background-color: rgb(216, 209, 209);*/
     background-color: rgb(128 128 128 / 8%);
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,-.1);
+    box-shadow: rgba(255, 255, 255, 0.473);
     position: relative;
     overflow: hidden;
+
+}
+
+.burguer:hover{
+    background-color:  rgba(50, 50, 50, 0.08);
 }
 
 .dish-heart{
@@ -601,7 +657,7 @@ body{
         justify-content: center;
         text-align: center;
         gap: 4px;
-        padding: 30px;
+        padding: 40px;
     }
     .btn-default {
         color: var(--laranja);
@@ -867,6 +923,54 @@ body{
         background-blend-mode: multiply;
         transition: 1.5s;
         top:25%
+    }
+}
+
+@media screen and (max-width:800px) {
+.card-drink01{
+    --left: -250px;
+ }
+.card-drink01:hover{
+    --left: -760px;
+    transform: translate(-50%) translateY(-60%);
+}
+.card-drink02{
+    --left: -360px;
+}
+.card-drink02:hover{
+    --left: -850px;
+    transform: translate(-50%) translateY(-60%);
+}
+.card-drink03{
+    --left:590px;
+}
+.card-drink03:hover{
+    --left:1600px;
+    transform: translate(-50%) translateY(-60%);
+}
+}
+
+@media screen and (max-width:550px) {
+    .card-drink01{
+        --left: -160px;
+     }
+    .card-drink01:hover{
+        --left: -730px;
+        transform: translate(-50%) translateY(-60%);
+    }
+    .card-drink02{
+        --left: -240px;
+    }
+    .card-drink02:hover{
+        --left: -1050px;
+        transform: translate(-50%) translateY(-60%);
+    }
+    .card-drink03{
+        --left:390px;
+    }
+    .card-drink03:hover{
+        --left:1050px;
+        transform: translate(-50%) translateY(-60%);
     }
 }
 /*FIM CÓDIGO SEÇÃO DRINKS*/
